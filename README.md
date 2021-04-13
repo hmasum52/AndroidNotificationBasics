@@ -7,5 +7,6 @@ I have used android view binding in this project to avoid findViewById(). You ca
 
 ## Tutorial followed
 - [Coding in flow youtube playlist](https://www.youtube.com/watch?v=tTbd1Mfi-Sk&list=PLrnPJCHvNZuCN52QwGu7YTSLIMrjCF0gM)
+- [Coding in flow official website](https://codinginflow.com/tutorials/android/notifications-notification-channels/part-1-notification-channels)
 - [Anatomy of Notification](https://developer.android.com/guide/topics/ui/notifiers/notifications#Templates)
 - [Official guide of android](https://developer.android.com/training/notify-user/build-notification#SimpleNotification)

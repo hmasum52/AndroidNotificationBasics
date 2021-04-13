@@ -5,6 +5,9 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
 import android.app.Notification;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -37,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
                 builder.setContentText(mVB.bigTextEDT.getText());
             builder.setPriority(NotificationCompat.PRIORITY_HIGH);
 
+            // make notification clickable
+            Intent activityIntent = new Intent(this, MainActivity.class);
+            PendingIntent contentIntent = PendingIntent.getActivity(this, 0 , activityIntent, 0);
+            builder.setContentIntent(contentIntent);
+            builder.setAutoCancel(true);
+            builder.setOnlyAlertOnce(true);
+            builder.setColor(Color.GREEN);
+
             //if we want push multiple notification by this channel
             // we have to give a different id every time
             Log.d(TAG,"Sending notification to channel-1");
@@ -52,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
             if(!mVB.bigTextEDT.getText().equals(""))
                 builder.setStyle(new NotificationCompat.BigTextStyle().bigText(mVB.bigTextEDT.getText()));
             builder.setPriority(NotificationCompat.PRIORITY_LOW);
+
+            // make notification clickable
+            Intent activityIntent = new Intent(this, MainActivity.class);
+            PendingIntent contentIntent = PendingIntent.getActivity(this, 0 , activityIntent, 0);
+            builder.setContentIntent(contentIntent);
+            builder.setAutoCancel(true);
+            builder.setColor(Color.GREEN);
 
             //if we want push multiple notification by this channel
             // we have to give a different id every time
